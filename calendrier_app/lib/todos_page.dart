@@ -64,7 +64,7 @@ class _TodosPageState extends State<TodosPage> {
       if (_selectedThemeFilters.contains(currentId)) return true;
       final theme = _themes.firstWhere(
         (t) => t['id'] == currentId,
-        orElse: () => null,
+        orElse: () => <String, dynamic>{},
       );
       currentId = theme?['parent_id'];
     }
@@ -645,7 +645,7 @@ class _AddTodoBarState extends State<_AddTodoBar> {
     if (_selectedThemeId == null) return 'Thème';
     final theme = widget.themes.firstWhere(
       (t) => t['id'] == _selectedThemeId,
-      orElse: () => null,
+      orElse: () => <String, dynamic>{},
     );
     return theme != null ? theme['name'] : 'Thème';
   }
@@ -711,7 +711,7 @@ class _AddTodoBarState extends State<_AddTodoBar> {
   Widget build(BuildContext context) {
     final selectedTheme = _selectedThemeId == null
         ? null
-        : widget.themes.firstWhere((t) => t['id'] == _selectedThemeId, orElse: () => null);
+        : widget.themes.firstWhere((t) => t['id'] == _selectedThemeId, orElse: () => <String, dynamic>{});
 
     return Row(
       children: [
