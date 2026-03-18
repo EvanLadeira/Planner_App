@@ -1,0 +1,17 @@
+# Backend
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+backend/calendrier.db
+
+# Flutter
+calendrier_app/.dart_tool/
+calendrier_app/.flutter-plugins
+calendrier_app/.flutter-plugins-dependencies
+calendrier_app/build/
+calendrier_app/.packages
+calendrier_app/pubspec.lock
+
+# General
+.DS_Store
+*.log
